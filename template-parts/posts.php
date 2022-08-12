@@ -25,7 +25,7 @@ $wpb_all_query = new WP_Query(
 					<?php the_post_thumbnail( 'medium' ); ?>	
 			   </a>		
 			   <?php endif; ?>
-			<div>
+			<div style="margin-left: 20px">
 			<a href="<?php the_permalink(); ?>"><?php the_title( '<h2>', '</h2>'); ?> </a>
 			  <?php the_excerpt(); ?> 
 			  <?php echo get_the_date( get_option( 'date_format' ) ); ?>
