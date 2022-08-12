@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 	<h1><?= esc_html( __( 'Search page', 'dp' ) ); ?></h1>
 	<strong><?= esc_html( __( 'Search for: ', 'dp' ) ); ?></strong>
 <?php

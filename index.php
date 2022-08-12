@@ -1,12 +1,11 @@
+<?php get_header(); ?>
+
 <?php
-get_header();
+echo esc_html( get_template_part( 'template-parts/navigation' ) );
+echo esc_html( get_template_part( 'template-parts/posts' ) );
 ?>
 
 <?php the_content(); ?>
-
-<?php
-echo esc_html( get_template_part( 'template-parts/pagination', 'infinite-scroll' ) );
-?>
 
 <?php
 get_footer();
