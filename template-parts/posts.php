@@ -3,7 +3,7 @@ $wpb_all_query = new WP_Query(
 	[
 		'post_type'      => 'post',
 		'post_status'    => 'publish',
-		'posts_per_page' => -1,
+		'posts_per_page' => 6,
 	] 
 ); ?>
  
@@ -37,8 +37,12 @@ $wpb_all_query = new WP_Query(
 	<?php endwhile; ?>
  
 </ul>
+
 	<?php wp_reset_postdata(); ?>
- 
+    <div style="justify-content: center; margin: auto; display: flex;">
+  <h2> <?php the_posts_pagination(); ?></h2> 
+    </div>
+   
 <?php else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
