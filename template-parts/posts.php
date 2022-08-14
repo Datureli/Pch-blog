@@ -1,14 +1,4 @@
-<?php 
-$wpb_all_query = new WP_Query(
-	[
-		'post_type'      => 'post',
-		'post_status'    => 'publish',
-		'posts_per_page' => 4,
-        'has_archive'   => false,
-	] 
-); ?>
-
-<?php if ( have_posts() && is_home()  ) : ?>
+<?php if ( have_posts() && is_home() ) : ?>
  
 <ul style="list-style: none;">
  
@@ -26,7 +16,7 @@ $wpb_all_query = new WP_Query(
 			   </a>		
 			   <?php endif; ?>
 			<div style="margin-left: 20px">
-			<a href="<?php the_permalink(); ?>"><?php the_title( '<h2>', '</h2>'); ?> </a>
+			<a href="<?php the_permalink(); ?>"><?php the_title( '<h2>', '</h2>' ); ?> </a>
 			  <?php the_excerpt(); ?> 
 			  <?php echo get_the_date( get_option( 'date_format' ) ); ?>
 			</div>
@@ -36,14 +26,13 @@ $wpb_all_query = new WP_Query(
 	<?php endwhile; ?>
  
 </ul>
-
 	<?php wp_reset_postdata(); ?>
 	<div style="justify-content: center; margin: auto; display: flex;">
 		<h2><?php the_posts_pagination(); ?></h2> 
 	</div>
    
 <?php else : ?>
-    <?php if(is_home())  : ?>
+	<?php if ( is_home() ) : ?>
 	<p><?php _e( 'Sorry, no posts here' ); ?></p>
-    <?php endif; ?>
+	<?php endif; ?>
 <?php endif; ?>

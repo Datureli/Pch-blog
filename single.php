@@ -21,7 +21,7 @@
 		?>
 	</div>
 <?php echo esc_html( get_template_part( 'template-parts/pagination' ) ); ?>
-	<div style="display: flex; margin: auto; justify-content: space-evenlyf;">
+	<div style="display: flex; margin: auto; justify-content: space-evenly;">
 		<?php previous_post_link(); ?> | <?php next_post_link(); ?>
 	</div>
 <?php
