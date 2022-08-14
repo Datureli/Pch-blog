@@ -26,6 +26,7 @@ module.exports = {
 		'no-console': 1,
 		'no-unused-vars': 1,
 		'comma-dangle': 0,
+		'linebreak-style': [ 'error', ( 'win32' === process.platform ? 'windows' : 'unix' ) ]
 	},
 	globals: {
 		wp: true,
