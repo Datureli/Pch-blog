@@ -1,4 +1,8 @@
 .footer {
+  width: 100%;
+  font-size: 30px;
+  height: 60px;
+  background: #e9e8e8;
 }
 
 @include min-size(md) {

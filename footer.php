@@ -1,5 +1,5 @@
 <footer class="footer">
-    <div style="background-color: #e9e8e8; height: 250px;">
+    <div>
         <a href="https://developress.io/" target="_blank">DeveloPress</a>
   
 <?php $policy_page = get_option( 'wp_page_for_privacy_policy' ); ?>
