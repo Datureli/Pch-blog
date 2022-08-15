@@ -51,6 +51,4 @@ function departament_taxonomy() {
 	register_taxonomy( 'departaments', [ 'teams' ], $args );     
 }
 
-	add_action( 'init', 'departament_taxonomy' );
-
 new Theme();
