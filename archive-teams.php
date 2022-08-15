@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-<div class="nav">
-	<div class="nav__links">
-		<?php wp_nav_menu( $args ); ?>
-	</div>
-</div>
-
 <?php if ( have_posts() ) : ?>
 	<?php 
 	while ( have_posts() ) :
