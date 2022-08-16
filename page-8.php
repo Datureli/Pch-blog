@@ -1,7 +1,11 @@
-
+<?php get_header(); ?>
 <?php
-get_header(); 
 /**
  * Template Name: About us
+ *  
+ * @package WordPress
  */
 the_content();
+?>
+<?php
+get_footer();
