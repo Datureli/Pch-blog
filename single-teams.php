@@ -1,4 +1,4 @@
-<?php 	get_header(); ?>
+<?php get_header(); ?>
 
 	<div style="display: grid; margin: auto; justify-content: center;">
 		<?php

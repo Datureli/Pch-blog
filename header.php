@@ -11,8 +11,6 @@
 	?>
 </head>
 
-
-
 <body <?php body_class(); ?> style="opacity: 0;">
 <div class="nav">
 	<div class="nav__links">
