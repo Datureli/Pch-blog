@@ -71,27 +71,25 @@ if ( ! function_exists( 'prefix_custom_the_title' ) ) {
 add_filter( 'the_title', 'bold_title' );
 
 function add_text_after_single_blog( $content ) {
-	if (is_single()) {
-		if (     
-			get_post_type() == 'post' ) {
+	if ( is_single() ) {
+		if ( get_post_type() == 'post' ) {
 				  $content .= '<h2>If u like this artcile, check the other</h2>';
-		  } else if (     
-			  get_post_type() == 'teams' ) {
-			  $content .= '<h2>Check others members of team</h2>';
-		  }
+		} elseif ( get_post_type() == 'teams' ) {
+			$content .= '<h2>Check others members of team</h2>';
+		}
 	}
 	
 	return $content;
 }
 add_filter( 'the_content', 'add_text_after_single_blog' );
 
-function aboutus_content( $content ){
-    global $template;
-    $name = basename( $template, '.php' );
-    if( 'page-about-us' == $name ){
-        $content .= 'Additional content for about us page from filters';
-    }
-    return $content;
+function aboutus_content( $content ) {
+	global $template;
+	$name = basename( $template, '.php' );
+	if ( 'page-about-us' == $name ) {
+		$content .= 'Additional content for about us page from filters';
+	}
+	return $content;
 }
 add_filter( 'the_content', 'aboutus_content' );
 
