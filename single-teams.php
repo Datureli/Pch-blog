@@ -25,6 +25,9 @@
 			<?php
 		}
 		?>
+				<?php echo esc_html( get_template_part( 'template-parts/pagination' ) ); ?>
+	<div>
+		<?php previous_post_link(); ?> | <?php next_post_link(); ?>
 	</div>
 <?php
 get_footer();
