@@ -70,17 +70,6 @@ if ( ! function_exists( 'prefix_custom_the_title' ) ) {
 
 add_filter( 'the_title', 'bold_title' );
 
-function floridacontent( $content ) {
-	global $template;
-	$name = basename( $template, '.php' );
-	if ( 'page-florida' == $name ) {
-		$content .= 'Forida added content';
-	}
-	return $content;
-}
-add_filter( 'the_content', 'floridacontent' );
-
-
 function add_text_after_single_blog( $content ) {
 	if ( ! is_home() &&    
 	is_singular( 'post' ) ) {
