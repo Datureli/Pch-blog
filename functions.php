@@ -54,4 +54,47 @@ function departament_taxonomy() {
 	add_action( 'init', 'departament_taxonomy' );
 
 
+if ( ! function_exists( 'prefix_custom_excerpt_length' ) ) {
+	function prefix_custom_excerpt_length( $length ) {
+		return 30;
+	}
+}
+
+add_filter( 'excerpt_length', 'prefix_custom_excerpt_length' );
+
+if ( ! function_exists( 'prefix_custom_the_title' ) ) {
+	function bold_title( $title ) {
+		return '<strong>' . $title . '</strong>';
+	}
+}
+
+add_filter( 'the_title', 'bold_title' );
+
+function floridacontent( $content ){
+    global $template;
+    $name = basename( $template, '.php' );
+    if( 'page-florida' == $name ){
+        $content .= 'Forida added content';
+    }
+    return $content;
+}
+add_filter( 'the_content', 'floridacontent' );
+
+
+function add_text_after_single_blog( $content ) {
+	if (  ! is_home() && 	
+	is_singular( 'post' )  ) {
+			$content .= '<h2>If u like this artcile, check the other</h2>';
+	} 
+	else if ( ! is_home() && 	
+	is_single( )) {
+		$content .= '<h2>Check others members of team</h2>';
+	}
+	return $content;
+}
+add_filter( 'the_content', 'add_text_after_single_blog' );
+
+	register_nav_menu( 'top-navigation', __( 'Header menu', 'nuplo' ) );
+	register_nav_menu( 'footer', __( 'Footer menu', 'nuplo' ) );
+
 new Theme();

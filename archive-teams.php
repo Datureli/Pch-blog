@@ -5,7 +5,7 @@
 	while ( have_posts() ) :
 		the_post(); 
 		?>
-<div style="display: flex; margin-left: 30px;">
+<div>
 <div>
 		<?php if ( has_post_thumbnail() ) : ?>
 				<a href="<?php the_permalink(); ?>">

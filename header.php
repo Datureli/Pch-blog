@@ -12,9 +12,9 @@
 </head>
 
 <body <?php body_class(); ?> style="opacity: 0;">
-<div class="nav">
-	<div class="nav__links">
-		<?php wp_nav_menu( $args ); ?>
+<div class="header">
+	<div class="header__links">
+		<?php wp_nav_menu( [ 'theme_location' => 'top-navigation' ] ); ?>
 	</div>
 </div>
 <?php

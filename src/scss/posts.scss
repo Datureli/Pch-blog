@@ -1,43 +1,18 @@
 .posts {
+
+  ul {
     display: flex;
-    justify-content: space-around;
-  
-    ul {
-      display: flex;
-      text-decoration: none;
-    }
-  
-    li {
-      list-style: none;
-    }
-  
-    &__links {
-      display: flex;
-      font-size: 3rem;
-      text-decoration: none;
-      a {
-        color: var(--black);
-        text-decoration: none;
-        margin-right: 20px;
-      }
-    }
+    text-decoration: none;
   }
-  
-  @include min-size(md) {
-    .nav {
-    }
+
+  li {
+    display: flex;
+    list-style: none;
   }
-  
-  @include min-size(lg) {
-    .nav {
-      &__mobile-menu,
-      &__mobile-container {
-        display: none;
-      }
-  
-      &__main-menu {
-        display: initial;
-      }
-    }
+
+  &__pagination {
+    display: flex;
+    margin: auto;
+    justify-content: center;
   }
-  
+ }
