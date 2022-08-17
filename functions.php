@@ -85,6 +85,16 @@ function add_text_after_single_blog( $content ) {
 }
 add_filter( 'the_content', 'add_text_after_single_blog' );
 
+function aboutus_content( $content ){
+    global $template;
+    $name = basename( $template, '.php' );
+    if( 'page-about-us' == $name ){
+        $content .= 'Additional content for about us page from filters';
+    }
+    return $content;
+}
+add_filter( 'the_content', 'aboutus_content' );
+
 	register_nav_menu( 'top-navigation', __( 'Header menu', 'nuplo' ) );
 	register_nav_menu( 'footer', __( 'Footer menu', 'nuplo' ) );
 
